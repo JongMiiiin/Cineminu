@@ -1,0 +1,95 @@
+/* src/pages/LoginPage.css */
+
+.login-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* 화면 전체 높이를 차지하도록 설정 */
+    background-color: #f0f2f5;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  
+  .login-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 2.5rem;
+  }
+  
+  .login-form-card {
+    background-color: white;
+    padding: 2.5rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 400px; /* 폼 카드의 최대 너비 */
+    text-align: center;
+  }
+  
+  .input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+  }
+  
+  .input-group input:focus {
+    outline: none;
+    border-color: #007bff; /* 포커스 시 테두리 색상 변경 */
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 0.9rem;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    background-color: #343a40; /* 어두운 회색 버튼 */
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .login-button:hover {
+    background-color: #495057;
+  }
+  
+  .signup-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #666;
+    text-decoration: none;
+  }
+  
+  .signup-link:hover {
+    text-decoration: underline;
+  }
+
+.error-message {
+  color: #dc3545; /* 빨간색 텍스트 */
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}

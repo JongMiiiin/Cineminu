@@ -1,0 +1,290 @@
+/* 전체 페이지 기본 스타일 */
+.homepage-container {
+  padding: 2rem 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+.page-title {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+/* 캐러셀 wrapper */
+.wrapper-card.chart {
+  max-width: 1300px;
+  margin: 50px auto 0;
+}
+
+.slick-slide {
+  padding: 0 15px;
+}
+
+/* ===========================
+    영화 카드 스타일 시작
+=========================== */
+
+/* 카드 한 장 */
+.movie-card-item {
+  width: 210px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+/* 포스터 이미지와 오버레이가 포함된 박스 */
+.poster-box {
+  position: relative;              /* 오버레이의 기준 부모 */
+  width: 100%;
+  height: 305px;
+  border-radius: 10px;
+  overflow: hidden;               /* 오버레이 삐져나오는 것 방지 */
+  cursor: pointer;
+}
+
+/* 영화 포스터 이미지 */
+.poster-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 1;
+  position: relative;
+  border-radius: 10px;
+}
+
+/* 순위 뱃지 */
+.rank-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: red;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 12px;
+  z-index: 3;
+}
+
+/* 오버레이 박스 */
+.details-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 16px;
+  box-sizing: border-box;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 2;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* 호버 시 오버레이 등장 */
+.poster-box:hover .details-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 오버레이 안 제목 스타일 */
+.overlay-title-ko {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.overlay-title-en {
+  font-size: 12px;
+  color: #ccc;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 상세 정보 목록 */
+.overlay-details {
+  font-size: 11px;
+}
+
+.detail-item {
+  margin-bottom: 6px;
+}
+
+.detail-key {
+  color: #aaa;
+  font-weight: 500;
+  margin-right: 6px;
+}
+
+.detail-value {
+  color: white;
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 아래 요약 박스 */
+.summary-box {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.summary-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.summary-info {
+  font-size: 12px;
+  color: #666;
+}
+
+.detail-item {
+  margin-bottom: 10px;
+}
+
+.detail-item .detail-key {
+  display: block;
+  font-weight: 500;
+  color: #aaa;
+}
+
+.detail-item .detail-value {
+  display: block;
+  margin-top: 2px;
+  color: white;
+  font-weight: 300;
+}
+
+/* --- Search Page Styles --- */
+.search-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-title { /* HomePage와 공유 가능 */
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.search-bar {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.search-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.search-results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.page-message { /* HomePage와 공유 가능 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* 캐러셀 컨테이너에 position: relative 추가 */
+.box-office-carousel {
+  position: relative; /* 화살표 버튼의 위치 기준점 */
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* src/styles.css 또는 App.css의 캐러셀 관련 CSS를 아래 코드로 교체 */
+
+/* --- Carousel Styles --- */
+.box-office-carousel {
+  /* ⭐️ 1. 화살표 위치의 기준점으로 설정 (가장 중요!) */
+  position: relative; 
+  max-width: 1400px;
+  margin: 0 auto;
+  height: auto; /* 또는 필요 시 min-height 설정 */
+}
+
+.slick-list {
+  padding: 1rem 0;
+}
+
+.slick-slide {
+  padding: 0 12px;
+}
+
+/* --- Custom Arrow Styles --- */
+/* 공통 화살표 스타일 */
+.custom-arrow {
+  position: absolute;
+  top: 152.5px; /* 305px의 절반 */
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.custom-arrow:hover {
+  background-color: white;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* 왼쪽 화살표를 컨텐츠 영역에서 바깥쪽으로 밀기 */
+.custom-prev-arrow {
+  left: -70px; /* 필요 시 더 크게: -80px, -100px 등 조정 가능 */
+}
+
+/* 오른쪽 화살표도 동일하게 바깥쪽으로 */
+.custom-next-arrow {
+  right: -70px;
+}
+
+/* react-slick 기본 화살표 숨기기 */
+.slick-prev,
+.slick-next {
+  display: none !important;
+}

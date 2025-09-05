@@ -1,0 +1,161 @@
+.calendar-page-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+ }
+ 
+ .page-title {
+  text-align: center;
+  margin-bottom: 2rem;
+ }
+ 
+ /* react-calendar 커스텀 */
+ .my-calendar {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.07);
+  padding: 1.5rem;
+ }
+ 
+ .react-calendar__tile {
+  height: 80px; /* 썸네일이 들어갈 적절한 높이 */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center; /* 날짜 숫자 중앙 정렬 */
+  align-items: center;
+  padding: 0; /* 내부 패딩 제거 */
+  border-radius: 6px;
+  font-size: 0.8rem; /* 날짜 숫자 크기 조정 */
+ }
+ 
+ .react-calendar__tile abbr {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-weight: bold;
+  z-index: 2;
+  color: #333;
+ }
+ 
+ .react-calendar__tile:enabled:hover,
+ .react-calendar__tile:enabled:focus {
+  background-color: #e6f7ff;
+ }
+ 
+ .react-calendar__tile--now {
+  background: #ffff76;
+ }
+ 
+ .react-calendar__tile--active {
+  background: #006edc;
+  color: white;
+ }
+ 
+ .calendar-poster-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+ }
+ 
+ .calendar-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8; /* 포스터 약간 흐릿하게 */
+ }
+ 
+ /* 요일별 색상 */
+ .react-calendar__month-view__days__day--weekend abbr {
+  color: #d10000;
+ }
+ .react-calendar__month-view__days__day--saturday abbr {
+  color: #006edc;
+ }
+ 
+ .my-calendar .react-calendar__month-view__days__day--neighboringMonth {
+  color: #d0d0d0 !important;
+  opacity: 0.5; /* 좀 더 흐리게 */
+  pointer-events: none;
+}
+ 
+ /* --- Review Modal Styles (기존 스타일 유지) --- */
+ .review-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ 
+ .review-modal {
+  width: 90%;
+  max-width: 500px;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+ }
+ 
+ .review-modal h2 { margin-top: 0; }
+ .review-modal textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: vertical;
+  font-size: 1rem;
+ }
+ 
+ .modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+ }
+ .modal-buttons button { padding: 0.6rem 1.2rem; border-radius: 5px; cursor: pointer; border: 1px solid transparent; }
+ .save-btn { background-color: #007bff; color: white; }
+ .cancel-btn { background-color: #f0f0f0; }
+ .delete-btn { background-color: #dc3545; color: white; margin-right: auto; }
+ 
+ /* --- MovieSearchBar Styles (기존 스타일 유지) --- */
+ .movie-search-bar { margin-bottom: 1rem; }
+ .search-input-group { display: flex; gap: 0.5rem; }
+ .search-input-group input { flex-grow: 1; padding: 0.75rem; border: 1px solid #ccc; border-radius: 5px; }
+ .search-input-group button { padding: 0.75rem 1rem; border: none; background: #007bff; color: white; border-radius: 5px; }
+ .search-results-list { list-style: none; padding: 0; margin: 0.5rem 0 0 0; border: 1px solid #eee; border-radius: 5px; max-height: 150px; overflow-y: auto; }
+ .search-results-list li { padding: 0.75rem; cursor: pointer; border-bottom: 1px solid #eee; }
+ .search-results-list li:last-child { border-bottom: none; }
+ .search-results-list li:hover { background-color: #f7f7f7; }
+ 
+ .selected-movie-info { display: flex; align-items: center; gap: 1rem; padding: 1rem; background-color: #f7f7f7; border-radius: 5px; }
+ .selected-movie-info img { width: 50px; height: 75px; object-fit: cover; border-radius: 3px; }
+ .movie-text-info { display: flex; flex-direction: column; }
+ .change-movie-btn { background: none; border: none; color: #007bff; cursor: pointer; padding: 0.2rem; text-decoration: underline; }
+
+ /* ⭐️ 검색 버튼에 대한 스타일 추가 */
+.search-input-group button.search-button {
+  padding: 0.75rem 1rem;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer; /* ⭐️ 마우스 포인터를 손가락 모양으로 변경 */
+  transition: background-color 0.2s;
+}
+
+.search-input-group button.search-button:hover {
+  background-color: #0056b3;
+}
